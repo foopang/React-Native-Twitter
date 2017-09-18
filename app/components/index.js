@@ -5,10 +5,10 @@ import {
   Image,
   Text,
   TouchableOpacity,
-  Navigator,
   View
 } from 'react-native';
 
+import { Navigator } from 'react-native-deprecated-custom-components';
 import Login from './login'
 import Home from './home'
 import Convo from './convo'
@@ -27,9 +27,9 @@ import Chat from './chat'
 export default class Index extends Component {
   constructor(props){
     super(props)
- 
+
   }
- 
+
   renderScene(route, navigator) {
     var {state,actions} = this.props;
     var routeId = route.id;
@@ -37,80 +37,80 @@ export default class Index extends Component {
     if (routeId === 'login') {
       return (
         <Login
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
     if (routeId === 'convo') {
       return (
         <Convo
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
     if (routeId === 'gallery') {
       return (
         <Gallery
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }if (routeId === 'discover') {
       return (
         <Discover
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
     if (routeId === 'convoTrans') {
       return (
         <ConvoTrans
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
     if (routeId === 'tweets') {
       return (
         <Tweets
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
      if (routeId === 'home') {
       return (
         <Home
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
     if (routeId === 'visualize') {
       return (
         <Visualize
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
     if (routeId === 'chat') {
       return (
         <Chat
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
     if (routeId === 'pinned') {
       return (
         <Pinned
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
     if (routeId === 'profile') {
       return (
         <Profile
-        {...this.props} 
+        {...this.props}
         navigator={navigator} />
         );
     }
-  
+
    }
 
 
